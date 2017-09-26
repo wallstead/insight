@@ -401,6 +401,10 @@ body {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto; }
+    #content .page .aboutinsight {
+      margin-right: 10px;
+      margin-left: 10px;
+      font-size: 1.1em; }
     #content .page h1 {
       text-align: center; }
     #content .page h2 {
@@ -415,12 +419,20 @@ body {
         margin: 0;
         width: 33.33%; }
     #content .page .profileContainer {
-      display: flex; }
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; }
       #content .page .profileContainer .profile {
-        width: 33.33%;
-        margin: 0 20px 0 0; }
-        #content .page .profileContainer .profile:last-of-type {
-          margin: 0; }
+        width: calc(100% - 20px);
+        margin: 0 10px 0 10px; }
+        @media screen and (min-width: 630px) {
+          #content .page .profileContainer .profile {
+            width: calc(50% - 20px);
+            margin: 0 10px 0 10px; } }
+        @media screen and (min-width: 64em) {
+          #content .page .profileContainer .profile {
+            width: calc(33.33% - 20px);
+            margin: 0 10px 0 10px; } }
         #content .page .profileContainer .profile h3 {
           display: flex;
           justify-content: center;

@@ -565,6 +565,12 @@ body {
         max-width: 1200px;
         margin: 0 auto;
 
+        .aboutinsight {
+          margin-right: 10px;
+          margin-left: 10px;
+          font-size: 1.1em;
+        }
+
         h1 {
             text-align: center;
             // font-size: 1rem;
@@ -593,13 +599,23 @@ body {
 
         .profileContainer {
             display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
 
             .profile {
-                width: 33.33%;
-                margin: 0 20px 0 0;
+              width: calc(100% - 20px);
+              margin: 0 10px 0 10px;
 
-                &:last-of-type {
-                    margin: 0;
+                @media screen and (min-width: 630px) {
+                  width: calc(50% - 20px);
+                  margin: 0 10px 0 10px;
+
+
+                }
+
+                @include break(large) {
+                    width: calc(33.33% - 20px);
+                    margin: 0 10px 0 10px;
                 }
 
                 h3 {
