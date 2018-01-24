@@ -78,7 +78,7 @@
                           $header = $response['headers']; // array of http header lines
                             $body = $response['body']; // use the content
                             $array = json_decode( $body, true );
-                            if( ! empty( $array ) ) {
+                            if( !empty( $array ) ) {
 
                                 $counter = 0;
                                 foreach($array['response']['docs'] as $doc) {
